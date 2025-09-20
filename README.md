@@ -1,19 +1,32 @@
 # Sentimental_Analysis
 Emotion-based Sentiment Analysis using Transformer Models
+
 📌 Overview
+
 This project presents a comparative study of transformer-based models (BERT and DistilBERT) for emotion-based sentiment analysis.
+
 The work investigates how large and small language models perform on tasks that require detecting emotions such as joy, anger, fear, sadness, surprise, and love in text.
+
 Our findings indicate that while both models achieve good results, BERT outperforms DistilBERT in terms of accuracy and robustness for complex emotional sentiment tasks.
       
 📊 Dataset
+
 Dataset Used: EMOTION_LARGE.csv
+
 Samples: 20,000 text samples
+
 Labels:
+
 *Joy
+
 *Sadness
+
 *Love
+
 *Anger
+
 *Fear
+
 *Surprise
 Challenge: The dataset is imbalanced (e.g., "joy" is frequent while "surprise" is rare).
 Solution: Applied class-weighting to handle imbalance during training.
