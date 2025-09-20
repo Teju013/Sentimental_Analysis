@@ -1,72 +1,70 @@
 # Sentimental_Analysis
-Emotion-based Sentiment Analysis using Transformer Models
+
+Emotion-based Sentiment Analysis using Transformer Models (BERT & DistilBERT)
 
 📌 Overview
 
-This project presents a comparative study of transformer-based models (BERT and DistilBERT) for emotion-based sentiment analysis.
+This project evaluates the performance of transformer-based language models BERT and DistilBERT for emotion detection in sentiment analysis.
+The task focuses on identifying six emotions from text data:
 
-The work investigates how large and small language models perform on tasks that require detecting emotions such as joy, anger, fear, sadness, surprise, and love in text.
+Joy
 
-Our findings indicate that while both models achieve good results, BERT outperforms DistilBERT in terms of accuracy and robustness for complex emotional sentiment tasks.
-      
+Sadness
+
+Anger
+
+Fear
+
+Love
+
+Surprise
+
+The study compares the performance of large (BERT) and smaller (DistilBERT) transformer architectures on an imbalanced dataset using fine-tuning and weighting strategies.
+
 📊 Dataset
 
-Dataset Used: EMOTION_LARGE.csv
+Dataset Used: DAIR-AI Emotion Dataset
 
-Samples: 20,000 text samples
+Size: 20,000 samples
 
-Labels:
+Labels: Joy, Sadness, Anger, Fear, Love, Surprise
 
-*Joy
+Train / Validation / Test Split: 70% / 20% / 10%
 
-*Sadness
-
-*Love
-
-*Anger
-
-*Fear
-
-*Surprise
-
-Challenge: The dataset is imbalanced (e.g., "joy" is frequent while "surprise" is rare).
-
-Solution: Applied class-weighting to handle imbalance during training.
+Challenge: Imbalanced class distribution (e.g., Joy & Sadness more frequent, Surprise & Love less frequent)
 
 ⚙️ Methodology
 
-1.Data preprocessing & label mapping
+1.Data Preprocessing
 
-2.Tokenization with Hugging Face Transformers
+      Label mapping
 
-3.Fine-tuning BERT-base-cased and DistilBERT-base-cased models
+      Tokenization using Hugging Face Transformers
 
-4.Applied class-weight balancing
+      Handling class imbalance via inverse frequency class weighting
 
-5.Evaluation using metrics: Accuracy, Precision, Recall, F1-score
+2.Model Training
 
-🏗️ Architecture
+      Pretrained Models: bert-base-cased and distilbert-base-cased
 
-<img width="721" height="349" alt="image" src="https://github.com/user-attachments/assets/e98f72c5-ee7b-450d-989f-3cb29001e009" />
+      Hyperparameters:
 
-📊 Results
+            Epochs: 3
 
-The models were evaluated on the DAIR-AI Emotion Dataset (20,000 samples, 6 emotion labels) using Accuracy, Precision, Recall, and F1-score.
+            Batch Size: 8
 
-🔹 Performance Comparison
+            Learning Rate: 2e-5
 
-<img width="600" height="314" alt="image" src="https://github.com/user-attachments/assets/2e811068-e6fe-495d-b75b-f98da128a9e6" />
+            Weight Decay: 0.01
 
-<img width="683" height="435" alt="image" src="https://github.com/user-attachments/assets/3de50cea-b357-4314-a69c-1c820455fca7" />
+3.Evaluation Metrics
 
-<img width="697" height="427" alt="image" src="https://github.com/user-attachments/assets/a622ce56-b43f-4ead-8e35-77a2283f60aa" />
+      Accuracy
 
-<img width="709" height="421" alt="image" src="https://github.com/user-attachments/assets/b371e0ef-f4a2-4418-9f45-bfc133f487df" />
+      Precision
 
-🔮 Future Work
+      Recall
 
-*Extend to aspect-level sentiment analysis (e.g., political protests, product reviews)
+      F1-Score
 
-*Build ensemble prediction models combining multiple transformers
-
-*Use larger and more diverse datasets for better generalization
+      Confusion Matrix
