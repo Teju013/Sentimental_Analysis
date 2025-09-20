@@ -68,3 +68,29 @@ Challenge: Imbalanced class distribution (e.g., Joy & Sadness more frequent, Sur
       F1-Score
 
       Confusion Matrix
+
+📈 Results
+
+Before Handling Imbalance
+
+<img width="979" height="220" alt="image" src="https://github.com/user-attachments/assets/23ae480a-79fe-4227-9de3-dc95f596453c" />
+
+After Handling Imbalance
+
+<img width="979" height="219" alt="image" src="https://github.com/user-attachments/assets/10f7069c-09b6-4300-a385-961fb2831456" />
+
+🔹 Key Observations:
+
+BERT consistently outperforms DistilBERT overall.
+
+DistilBERT shows competitive results and sometimes surpasses BERT on minority labels with fewer samples.
+
+Weighted loss significantly improved both models’ performance on imbalanced data.
+
+📜 Conclusion
+
+BERT achieved the best overall accuracy (94.65%) after class imbalance handling.
+
+DistilBERT, while smaller and faster, achieved near-competitive performance (94.35%) and sometimes outperformed BERT on minority classes.
+
+Weighted loss functions are effective in addressing dataset imbalance for emotion classification tasks.
